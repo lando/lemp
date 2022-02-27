@@ -28,7 +28,7 @@ module.exports = {
         text: 'Overview',
         link: '/index.html',
       },
-      '/getting-started.md',
+      '/getting-started.html',
       '/config.html',
       '/tooling.html',
       '/support.html',
