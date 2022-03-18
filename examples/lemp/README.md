@@ -16,7 +16,7 @@ lando poweroff
 
 # Should initialize the 2.x cakephp codebase
 rm -rf lemp && mkdir -p lemp && cd lemp
-lando init --source remote --remote-url https://github.com/cakephp/cakephp/archive/refs/tags/2.6.5.tar.gz --remote-options="--strip-components=1" --recipe lemp --webroot . --name lando-lemp
+lando init --source remote --remote-url https://github.com/cakephp/cakephp/archive/refs/tags/2.10.24.tar.gz --remote-options="--strip-components=1" --recipe lemp --webroot . --name lando-lemp
 
 # Should move in our custom config and landofile
 cp -f .lando.local.yml lemp/.lando.local.yml
