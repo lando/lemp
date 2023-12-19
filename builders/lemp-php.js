@@ -20,12 +20,12 @@ const loadScripts = options => {
 
 // Builder
 module.exports = {
-  name: 'lamp-php',
+  name: 'lemp-php',
   parent: '_appserver',
-  builder: (parent, config) => class LampPhp extends LandoPhp.builder(parent, LandoPhp.config) {
+  builder: (parent, config) => class LempPhp extends LandoPhp.builder(parent, LandoPhp.config) {
     constructor(id, options = {}, factory) {
       loadScripts(options);
-      options.nginxServiceType = 'lamp-nginx';
+      options.nginxServiceType = 'lemp-nginx';
       super(id, options, factory);
     };
   },

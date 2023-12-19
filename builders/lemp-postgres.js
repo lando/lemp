@@ -5,9 +5,9 @@ const LandoPostgres = require('./../node_modules/@lando/postgres/builders/postgr
 
 // Builder
 module.exports = {
-  name: 'lamp-postgres',
+  name: 'lemp-postgres',
   parent: '_service',
-  builder: (parent, config) => class LampPostgres extends LandoPostgres.builder(parent, LandoPostgres.config) {
+  builder: (parent, config) => class LempPostgres extends LandoPostgres.builder(parent, LandoPostgres.config) {
     constructor(id, options = {}) {
       super(id, options, {services: _.set({}, options.name)});
     };

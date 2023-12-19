@@ -5,9 +5,9 @@ const LandoMysql = require('./../node_modules/@lando/mysql/builders/mysql.js');
 
 // Builder
 module.exports = {
-  name: 'lamp-mysql',
+  name: 'lemp-mysql',
   parent: '_service',
-  builder: (parent, config) => class LampMysql extends LandoMysql.builder(parent, LandoMysql.config) {
+  builder: (parent, config) => class LempMysql extends LandoMysql.builder(parent, LandoMysql.config) {
     constructor(id, options = {}) {
       super(id, options, {services: _.set({}, options.name)});
     };

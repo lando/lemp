@@ -180,7 +180,7 @@ const getTooling = options => _.merge({}, toolingDefaults, getDbTooling(options.
 
 
 /*
- * Build LAMP
+ * Build LEMP
  */
 module.exports = {
   name: 'lemp',
@@ -195,7 +195,7 @@ module.exports = {
     webroot: '.',
     xdebug: false,
   },
-  builder: (parent, config) => class LandoLamp extends parent {
+  builder: (parent, config) => class LandoLemp extends parent {
     constructor(id, options = {}) {
       options = _.merge({}, config, options);
       // Rebase on top of any default config we might already have

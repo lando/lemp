@@ -5,9 +5,9 @@ const LandoMariadb = require('./../node_modules/@lando/mariadb/builders/mariadb.
 
 // Builder
 module.exports = {
-  name: 'lamp-mariadb',
+  name: 'lemp-mariadb',
   parent: '_service',
-  builder: (parent, config) => class LampMariadb extends LandoMariadb.builder(parent, LandoMariadb.config) {
+  builder: (parent, config) => class LempMariadb extends LandoMariadb.builder(parent, LandoMariadb.config) {
     constructor(id, options = {}) {
       super(id, options, {services: _.set({}, options.name)});
     };
