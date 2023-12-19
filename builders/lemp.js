@@ -184,10 +184,12 @@ const getTooling = options => _.merge({}, toolingDefaults, getDbTooling(options.
  */
 module.exports = {
   name: 'lemp',
-  parent: 'recipe',
+  parent: '_recipe',
   config: {
     confSrc: __dirname,
     database: 'mysql',
+    defaultFiles: {
+    },
     php: '7.4',
     via: 'nginx',
     webroot: '.',
