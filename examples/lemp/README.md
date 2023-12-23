@@ -14,14 +14,11 @@ Run the following commands to get up and running with this example.
 # Should poweroff
 lando poweroff
 
-# Should move in our custom config and landofile
-rm -rf lemp && mkdir -p lemp
-cp -f .lando.local.yml lemp/.lando.local.yml
-cp -rf config lemp/config
-
 # Should initialize the 2.x cakephp codebase
-cd lemp
+rm -rf lemp && mkdir -p lemp && cd lemp
 lando init --source remote --remote-url https://github.com/cakephp/cakephp/archive/refs/tags/2.10.24.tar.gz --remote-options="--strip-components=1" --recipe lemp --webroot . --name lando-lemp
+cp -f ../.lando.local.yml .lando.local.yml && cat .lando.local.yml
+cp -rf ../config config
 
 # Should start up successfully
 cd lemp
