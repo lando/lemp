@@ -1,7 +1,7 @@
 'use strict';
 
 /*
- * Init Lamp
+ * Init Lemp
  */
 module.exports = {
   name: 'lemp',
