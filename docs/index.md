@@ -6,9 +6,9 @@ next: ./config.html
 
 # LEMP
 
-The [LEMP](https://en.wikipedia.org/wiki/LAMP_%28software_bundle%29) stack is a common infrastructure designed to run PHP applications.
+The LEMP stack is a common infrastructure designed to run PHP applications.
 
-Lando offers a configurable [recipe](https://docs.lando.dev/config/recipes.html) for developing [LEMP](https://en.wikipedia.org/wiki/LAMP_%28software_bundle%29) apps.
+Lando offers a configurable [recipe](https://docs.lando.dev/config/recipes.html) for developing LEMP apps.
 
 Note that this recipe is for a generic LEMP stack. Definitely check out Lando's [other recipes](https://docs.lando.dev/config/recipes.html) before you use this as there may be one designed specifically for use with your framework.
 
