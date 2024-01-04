@@ -194,6 +194,7 @@ module.exports = {
     via: 'nginx',
     webroot: '.',
     xdebug: false,
+    proxy: {},
   },
   builder: (parent, config) => class LandoLemp extends parent {
     constructor(id, options = {}) {
