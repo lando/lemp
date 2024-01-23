@@ -1,0 +1,6 @@
+name: lemp-exports
+recipe: lemp
+
+# do not remove this
+plugins:
+  "@lando/lemp": ../..
