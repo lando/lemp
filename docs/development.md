@@ -5,7 +5,7 @@ description: Learn how to develop and contribute to the Lando Lemp service
 
 # Development
 
-This guide contains information to help onboard developers to work on the [lemp](https://lemp.microsoft.com/en-us/) integration, hereafter referred to as *the plugin*.
+This guide contains information to help onboard developers to work on the [lemp](https://www.geeksforgeeks.org/what-is-lemp-stack/) integration, hereafter referred to as *the plugin*.
 
 ## Requirements
 
