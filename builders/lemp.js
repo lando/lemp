@@ -190,7 +190,7 @@ module.exports = {
     database: 'mysql',
     defaultFiles: {
     },
-    php: '7.4',
+    php: '8.3',
     via: 'nginx',
     webroot: '.',
     xdebug: false,

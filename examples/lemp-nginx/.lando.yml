@@ -3,7 +3,7 @@ recipe: lemp
 config:
   via: nginx
   webroot: web
-  php: 7.4
+  php: 8.2
 
 
 tooling:

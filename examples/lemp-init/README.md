@@ -17,7 +17,7 @@ lando poweroff
 # Should initialize the latest codeignitor codebase
 rm -rf lemp && mkdir -p lemp && cd lemp
 lando init --source remote --remote-url https://github.com/bcit-ci/CodeIgniter/archive/3.1.13.tar.gz --remote-options="--strip-components 1" --recipe lemp --webroot . --name lando-lemp --option composer_version=1.10.1
-cp -f ../.lando.local.yml .lando.local.yml && cat .lando.local.yml
+cp -f ../.lando.upstream.yml .lando.upstream.yml && cat .lando.upstream.yml
 
 # Should start up successfully
 cd lemp
@@ -34,9 +34,9 @@ Run the following commands to validate things are rolling as they should.
 cd lemp
 lando ssh -s appserver -c "curl -L localhost" | grep "CodeIgniter"
 
-# Should use 7.4 as the default php version
+# Should use 8.3 as the default php version
 cd lemp
-lando php -v | grep "PHP 7.4"
+lando php -v | grep "PHP 8.3"
 
 # Should be running nginx 1.17 by default
 lando ssh -s appserver_nginx -c "nginx -v 2>&1 | grep 1.17"

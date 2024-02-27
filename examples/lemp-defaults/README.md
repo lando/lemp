@@ -24,8 +24,8 @@ Run the following commands to validate things are rolling as they should.
 # Should serve from app root by default
 lando ssh -s appserver -c "curl -L localhost" | grep "DEFAULTS"
 
-# Should use 7.4 as the default php version
-lando php -v | grep "PHP 7.4"
+# Should use 8.3 as the default php version
+lando php -v | grep "PHP 8.3"
 
 # Should be running nginx 1.17 by default
 cd lemp
