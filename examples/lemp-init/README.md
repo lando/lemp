@@ -16,8 +16,8 @@ lando poweroff
 
 # Should initialize the latest codeignitor codebase
 rm -rf lemp && mkdir -p lemp && cd lemp
-lando init --source remote --remote-url https://github.com/bcit-ci/CodeIgniter/archive/3.1.13.tar.gz --remote-options="--strip-components 1" --recipe lemp --webroot . --name lando-lemp --option composer_version=1.10.1
-cp -f ../.lando.upstream.yml .lando.upstream.yml && cat .lando.upstream.yml
+lando init --source remote --remote-url https://github.com/bcit-ci/CodeIgniter/archive/3.1.13.tar.gz --remote-options="--strip-components 1" --recipe lemp --webroot . --name lando-lemp --option composer_version=1.10.27
+cp -f ../../.lando.upstream.yml .lando.upstream.yml && cat .lando.upstream.yml
 
 # Should start up successfully
 cd lemp
@@ -30,15 +30,16 @@ Verification commands
 Run the following commands to validate things are rolling as they should.
 
 ```bash
-# Should return the drupal installation page by default
+# Should return the CodeIgniter installation page by default
 cd lemp
-lando ssh -s appserver -c "curl -L localhost" | grep "CodeIgniter"
+lando ssh -s appserver_nginx -c "curl -L localhost" | grep "CodeIgniter"
 
 # Should use 8.3 as the default php version
 cd lemp
 lando php -v | grep "PHP 8.3"
 
 # Should be running nginx 1.17 by default
+cd lemp
 lando ssh -s appserver_nginx -c "nginx -v 2>&1 | grep 1.17"
 
 # Should be running mysql 5.7 by default

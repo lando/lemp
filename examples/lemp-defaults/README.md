@@ -22,13 +22,12 @@ Run the following commands to validate things are rolling as they should.
 
 ```bash
 # Should serve from app root by default
-lando ssh -s appserver -c "curl -L localhost" | grep "DEFAULTS"
+lando ssh -s appserver_nginx -c "curl -L localhost" | grep "DEFAULTS"
 
 # Should use 8.3 as the default php version
 lando php -v | grep "PHP 8.3"
 
 # Should be running nginx 1.17 by default
-cd lemp
 lando ssh -s appserver_nginx -c "nginx -v 2>&1 | grep 1.17"
 
 # Should be running mysql 5.7 by default

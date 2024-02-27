@@ -1,7 +1,7 @@
 name: lemp-nginx
 recipe: lemp
 config:
-  via: nginx
+  via: nginx:1.25
   webroot: web
   php: 8.2
 

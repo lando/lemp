@@ -1,4 +1,4 @@
-LEMP PHP 8.1 Example
+LEMP MySQL 8 Example
 ===============
 
 This example exists primarily to test the following documentation:
@@ -16,7 +16,7 @@ lando poweroff
 
 # Initialize an empty lemp recipe
 rm -rf mysql8 && mkdir -p mysql8 && cd mysql8
-lando init --source cwd --recipe lemp --webroot app/public --name lando-lemp-mysql8 --option php='8.1' --option database=mysql:8.0.22
+lando init --source cwd --recipe lemp --webroot app/public --name lando-lemp-mysql8 --option database=mysql:8.0.22
 cp -f ../../.lando.upstream.yml .lando.upstream.yml && cat .lando.upstream.yml
 
 # Should start up successfully
@@ -35,6 +35,7 @@ cd mysql8
 lando php -v | grep "PHP 8.3"
 
 # Should be running nginx 1.17 by default
+cd mysql8
 lando ssh -s appserver_nginx -c "nginx -v 2>&1 | grep 1.17"
 
 # Should be running mysql 8.0.x by default
