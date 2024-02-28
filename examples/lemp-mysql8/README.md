@@ -49,6 +49,11 @@ lando php -m | grep xdebug || echo $? | grep 1
 # Should use the default database connection info
 cd mysql8
 lando mysql -ulemp -plemp lemp -e quit
+
+# Should use the defauly mysql8 config file
+cd mysql8
+lando ssh -s database -c "cat /opt/bitnami/mysql/conf/my_custom.cnf" | grep "LANDOLEMPMYSQL8CNF"
+lando mysql -u root -e "show variables;" | grep innodb_lock_wait_timeout | grep 127
 ```
 
 Destroy tests

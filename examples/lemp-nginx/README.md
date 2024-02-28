@@ -32,6 +32,10 @@ lando nginx -v 2>&1 | grep "nginx version" | grep "nginx/1.25"
 
 # Should use the php version specified by the user eg 8.3
 lando php -v | grep "PHP 8.2"
+
+# Should load the correct default nginx config
+lando ssh -s appserver_nginx -c "cat /opt/bitnami/nginx/conf/vhosts/lando.conf" | grep "LANDOLEMPNGINXCONF"
+lando ssh -s appserver_nginx -c "cat /opt/bitnami/nginx/conf/vhosts/lando.conf" | grep "WordPress single site rules."
 ```
 
 Destroy tests
