@@ -1,0 +1,15 @@
+name: lemp-nginx
+recipe: lemp
+config:
+  via: nginx:1.25
+  webroot: web
+  php: 8.2
+
+
+tooling:
+  nginx:
+    service: appserver_nginx
+
+# do not remove this
+plugins:
+  "@lando/lemp": ../..

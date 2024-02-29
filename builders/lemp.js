@@ -186,11 +186,12 @@ module.exports = {
   name: 'lemp',
   parent: '_recipe',
   config: {
-    confSrc: __dirname,
+    confSrc: path.resolve(__dirname, '..', 'config'),
     database: 'mysql',
     defaultFiles: {
+      php: 'php.ini',
     },
-    php: '7.4',
+    php: '8.3',
     via: 'nginx',
     webroot: '.',
     xdebug: false,

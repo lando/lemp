@@ -1,3 +1,16 @@
+## v1.2.0 - [February 27, 2024](https://github.com/lando/lemp/releases/tag/v1.2.0)
+
+### New Features
+
+* Make `php:8.3` the default PHP version. [#38](https://github.com/lando/lemp/issues/38)
+* Added support for `php:8.3`
+* Added support for `php:8.2`
+
+### Internal
+
+* Updated to `@lando/php@1.2.0`
+* Added more test coverage.
+
 ## v1.1.0 - [February 20, 2024](https://github.com/lando/lemp/releases/tag/v1.1.0)
 
 * Included ability to specify `database: mssql` in the `config` section to maintain backwards compatibility. [@lando/mssql#31](https://github.com/lando/mssql/issues/31)
