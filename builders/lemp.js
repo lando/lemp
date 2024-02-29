@@ -189,6 +189,7 @@ module.exports = {
     confSrc: path.resolve(__dirname, '..', 'config'),
     database: 'mysql',
     defaultFiles: {
+      php: 'php.ini',
     },
     php: '8.3',
     via: 'nginx',
