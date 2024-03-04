@@ -20,6 +20,8 @@ jobs:
         leia-test:
           - examples/lemp-custom
           - examples/lemp-defaults
+          - examples/lemp-downstreamer-1
+          - examples/lemp-downstreamer-2
           - examples/lemp-export
           - examples/lemp-import
           - examples/lemp-init
