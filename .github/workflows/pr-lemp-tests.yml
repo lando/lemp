@@ -25,6 +25,8 @@ jobs:
           - examples/lemp-export
           - examples/lemp-import
           - examples/lemp-init
+          - examples/lemp-mariadb
+          - examples/lemp-mariadb-mysql
           - examples/lemp-mysql8
           - examples/lemp-nginx
 
