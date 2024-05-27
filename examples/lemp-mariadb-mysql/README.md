@@ -1,9 +1,11 @@
-LEMP MySQL 8 Example
-====================
+LEMP MariaDB/MySQL Example
+==========================
 
 This example exists primarily to test the following documentation:
 
 * [LEMP Recipe](https://docs.devwithlando.io/tutorials/lemp.html)
+
+Versions of MariaDB 10.3.x and lower do not have the mariadb command and must use the mysql executable.
 
 Start up tests
 --------------
@@ -14,13 +16,13 @@ Run the following commands to get up and running with this example.
 # Should poweroff
 lando poweroff
 
-# Initialize an empty lemp recipe
-rm -rf mysql8 && mkdir -p mysql8 && cd mysql8
-lando init --source cwd --recipe lemp --webroot app/public --name lando-lemp-mysql8 --option database=mysql:8.0.22
+# Initialize an empty lamp recipe
+rm -rf mariadb && mkdir -p mariadb && cd mariadb
+lando init --source cwd --recipe lemp --webroot app/public --name lando-lemp-mariadb-mysql --option php=8.3 --option database=mariadb:10.3
 cp -f ../../.lando.upstream.yml .lando.upstream.yml && cat .lando.upstream.yml
 
 # Should start up successfully
-cd mysql8
+cd mariadb
 lando start
 ```
 
@@ -31,29 +33,28 @@ Run the following commands to validate things are rolling as they should.
 
 ```bash
 # Should use 8.3 as the default php version
-cd mysql8
+cd mariadb
 lando php -v | grep "PHP 8.3"
 
 # Should be running nginx 1.17 by default
-cd mysql8
+cd mariadb
 lando ssh -s appserver_nginx -c "nginx -v 2>&1 | grep 1.17"
 
-# Should be running mysql 8.0.x by default
-cd mysql8
-lando mysql -V | grep 8.0
+# Should be running mariadb 10.3.x by default
+cd mariadb
+lando mysql -V | grep "MariaDB" | grep 10.3.
 
 # Should not enable xdebug by default
-cd mysql8
+cd mariadb
 lando php -m | grep xdebug || echo $? | grep 1
 
 # Should use the default database connection info
-cd mysql8
+cd mariadb
 lando mysql -ulemp -plemp lemp -e quit
 
-# Should use the default mysql8 config file
-cd mysql8
-lando ssh -s database -c "cat /opt/bitnami/mysql/conf/my_custom.cnf" | grep "LANDOLEMPMYSQL8CNF"
-lando mysql -u root -e "show variables;" | grep innodb_lock_wait_timeout | grep 127
+# Should have artisan available
+cd mariadb
+lando artisan env
 ```
 
 Destroy tests
@@ -63,7 +64,7 @@ Run the following commands to trash this app like nothing ever happened.
 
 ```bash
 # Should be destroyed with success
-cd mysql8
+cd mariadb
 lando destroy -y
 lando poweroff
 ```
