@@ -5,8 +5,7 @@ This example exists primarily to test the following documentation:
 
 * [LEMP Recipe](https://docs.devwithlando.io/tutorials/lemp.html)
 
-Start up tests
---------------
+## Start up tests
 
 Run the following commands to get up and running with this example.
 
@@ -24,8 +23,7 @@ cd mysql8
 lando start
 ```
 
-Verification commands
----------------------
+## Verification commands
 
 Run the following commands to validate things are rolling as they should.
 
@@ -36,7 +34,7 @@ lando php -v | grep "PHP 8.3"
 
 # Should be running nginx 1.17 by default
 cd mysql8
-lando ssh -s appserver_nginx -c "nginx -v 2>&1 | grep 1.17"
+lando exec appserver_nginx -- nginx -v 2>&1 | grep 1.17
 
 # Should be running mysql 8.0.x by default
 cd mysql8
@@ -52,12 +50,11 @@ lando mysql -ulemp -plemp lemp -e quit
 
 # Should use the default mysql8 config file
 cd mysql8
-lando ssh -s database -c "cat /opt/bitnami/mysql/conf/my_custom.cnf" | grep "LANDOLEMPMYSQL8CNF"
+lando exec database -- cat /opt/bitnami/mysql/conf/my_custom.cnf | grep "LANDOLEMPMYSQL8CNF"
 lando mysql -u root -e "show variables;" | grep innodb_lock_wait_timeout | grep 127
 ```
 
-Destroy tests
--------------
+## Destroy tests
 
 Run the following commands to trash this app like nothing ever happened.
 

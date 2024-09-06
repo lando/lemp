@@ -7,8 +7,7 @@ This example exists primarily to test the following documentation:
 
 Versions of MariaDB 10.3.x and lower do not have the mariadb command and must use the mysql executable.
 
-Start up tests
---------------
+## Start up tests
 
 Run the following commands to get up and running with this example.
 
@@ -26,8 +25,7 @@ cd mariadb
 lando start
 ```
 
-Verification commands
----------------------
+## Verification commands
 
 Run the following commands to validate things are rolling as they should.
 
@@ -38,7 +36,7 @@ lando php -v | grep "PHP 8.3"
 
 # Should be running nginx 1.17 by default
 cd mariadb
-lando ssh -s appserver_nginx -c "nginx -v 2>&1 | grep 1.17"
+lando exec appserver_nginx -- nginx -v 2>&1 | grep 1.17
 
 # Should be running mariadb 10.3.x by default
 cd mariadb
@@ -57,8 +55,7 @@ cd mariadb
 lando artisan env
 ```
 
-Destroy tests
--------------
+## Destroy tests
 
 Run the following commands to trash this app like nothing ever happened.
 

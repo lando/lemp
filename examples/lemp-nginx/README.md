@@ -4,8 +4,7 @@ This example exists primarily to test the following documentation:
 
 * [LEMP Recipe](https://docs.lando.dev/lemp/config.html)
 
-Start up tests
---------------
+## Start up tests
 
 Run the following commands to get up and running with this example.
 
@@ -15,17 +14,16 @@ lando poweroff
 lando start
 ```
 
-Verification commands
----------------------
+## Verification commands
 
 Run the following commands to validate things are rolling as they should.
 
 ```bash
 # Should serve from web folder
-lando ssh -s appserver -c "curl -L appserver_nginx" | grep "NGINX"
+lando exec appserver -- curl -L appserver_nginx | grep "NGINX"
 
 # Should run using nginx if specified
-lando ssh -s appserver -c "curl -IL appserver_nginx" | grep Server | grep nginx
+lando exec appserver -- curl -IL appserver_nginx | grep Server | grep nginx
 
 # Should use nginx 1.25 by default
 lando nginx -v 2>&1 | grep "nginx version" | grep "nginx/1.25"
@@ -34,12 +32,11 @@ lando nginx -v 2>&1 | grep "nginx version" | grep "nginx/1.25"
 lando php -v | grep "PHP 8.2"
 
 # Should load the correct default nginx config
-lando ssh -s appserver_nginx -c "cat /opt/bitnami/nginx/conf/vhosts/lando.conf" | grep "LANDOLEMPNGINXCONF"
-lando ssh -s appserver_nginx -c "cat /opt/bitnami/nginx/conf/vhosts/lando.conf" | grep "WordPress single site rules."
+lando exec appserver_nginx -- cat /opt/bitnami/nginx/conf/vhosts/lando.conf | grep "LANDOLEMPNGINXCONF"
+lando exec appserver_nginx -- cat /opt/bitnami/nginx/conf/vhosts/lando.conf | grep "WordPress single site rules."
 ```
 
-Destroy tests
--------------
+## Destroy tests
 
 Run the following commands to trash this app like nothing ever happened.
 
