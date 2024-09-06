@@ -1,5 +1,8 @@
 name: lemp-custom
 recipe: lemp
+proxy:
+  appserver_nginx:
+    - another.lemp-custom.lndo.site
 config:
   php: '8.2'
   composer_version: '2.0.7'
