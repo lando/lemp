@@ -32,9 +32,9 @@ Run the following commands to validate things are rolling as they should.
 cd mysql8
 lando php -v | grep "PHP 8.3"
 
-# Should be running nginx 1.17 by default
+# Should be running nginx 1.27 by default
 cd mysql8
-lando exec appserver_nginx -- nginx -v 2>&1 | grep 1.17
+lando exec appserver_nginx -- nginx -v 2>&1 | grep 1.27
 
 # Should be running mysql 8.0.x by default
 cd mysql8

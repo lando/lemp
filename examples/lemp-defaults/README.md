@@ -20,13 +20,13 @@ Run the following commands to validate things are rolling as they should.
 
 ```bash
 # Should serve from app root by default
-lando exec appserver_nginx -- curl -L localhost | grep "DEFAULTS"
+lando exec curl -- curl -L localhost | grep "DEFAULTS"
 
 # Should use 8.3 as the default php version
 lando php -v | grep "PHP 8.3"
 
-# Should be running nginx 1.17 by default
-lando exec appserver_nginx -- nginx -v 2>&1 | grep 1.17
+# Should be running nginx 1.27 by default
+lando exec appserver_nginx -- nginx -v 2>&1 | grep 1.27
 
 # Should be running mysql 5.7 by default
 lando mysql -V | grep 5.7
@@ -35,7 +35,7 @@ lando mysql -V | grep 5.7
 lando exec appserver -- env | grep "COMPOSER_MEMORY_LIMIT=-1"
 
 # Should have a 1G php mem limit on appserver
-lando exec appserver_nginx -- curl http://localhost/info.php | grep "memory_limit" | grep "1G"
+lando exec curl -- curl http://localhost/info.php | grep "memory_limit" | grep "1G"
 
 # Should have unlimited memory for php for CLI opts
 lando php -i | grep memory_limit | grep -e "-1"
@@ -49,7 +49,7 @@ lando mysql lemp -e quit
 
 # Should use the correct default config files
 lando exec appserver -- cat /usr/local/etc/php/conf.d/zzz-lando-my-custom.ini | grep "; LANDOLEMPPHPINI"
-lando exec appserver_nginx -- curl -L http://localhost/info.php | grep max_execution_time | grep 91
+lando exec curl -- curl -L http://localhost/info.php | grep max_execution_time | grep 91
 lando exec database -- cat /opt/bitnami/mysql/conf/my_custom.cnf | grep "LANDOLEMPMYSQLCNF"
 lando mysql -u root -e "show variables;" | grep innodb_lock_wait_timeout | grep 121
 
