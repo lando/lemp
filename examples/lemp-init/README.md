@@ -30,15 +30,15 @@ Run the following commands to validate things are rolling as they should.
 ```bash
 # Should return the CodeIgniter installation page by default
 cd lemp
-lando exec appserver_nginx -- curl -L localhost | grep "CodeIgniter"
+lando exec curl -- curl -L localhost | grep "CodeIgniter"
 
 # Should use 8.3 as the default php version
 cd lemp
 lando php -v | grep "PHP 8.3"
 
-# Should be running nginx 1.17 by default
+# Should be running nginx 1.27 by default
 cd lemp
-lando exec appserver_nginx -- nginx -v 2>&1 | grep 1.17
+lando exec appserver_nginx -- nginx -v 2>&1 | grep 1.27
 
 # Should be running mysql 5.7 by default
 cd lemp
