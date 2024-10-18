@@ -1,6 +1,12 @@
 name: lemp-defaults
 recipe: lemp
 
+services:
+  curl:
+    api: 4
+    image: curlimages/curl
+    command: sleep infinity
+
 # do not remove this
 plugins:
   "@lando/lemp": ../..
