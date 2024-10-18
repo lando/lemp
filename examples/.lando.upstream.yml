@@ -1,2 +1,8 @@
+services:
+  curl:
+    api: 4
+    image: curlimages/curl
+    command: sleep infinity
+
 plugins:
   "@lando/lemp": ../../..
