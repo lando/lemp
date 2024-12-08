@@ -1,5 +1,4 @@
-LEMP Example
-============
+# LEMP Init Example
 
 This example exists primarily to test the following documentation:
 
@@ -16,10 +15,10 @@ lando poweroff
 # Should initialize the latest codeignitor codebase
 rm -rf lemp && mkdir -p lemp && cd lemp
 lando init --source remote --remote-url https://github.com/bcit-ci/CodeIgniter/archive/3.1.13.tar.gz --remote-options="--strip-components 1" --recipe lemp --webroot . --name lando-lemp --option composer_version=1.10.27
-cp -f ../../.lando.upstream.yml .lando.upstream.yml && cat .lando.upstream.yml
 
 # Should start up successfully
 cd lemp
+cp -f ../../.lando.upstream.yml .lando.upstream.yml && cat .lando.upstream.yml
 lando start
 ```
 

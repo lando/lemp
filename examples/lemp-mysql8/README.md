@@ -1,5 +1,4 @@
-LEMP MySQL 8 Example
-====================
+# LEMP MySQL 8 Example
 
 This example exists primarily to test the following documentation:
 

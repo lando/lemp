@@ -1,5 +1,4 @@
-LEMP MariaDB Example
-====================
+# LEMP MariaDB Example
 
 This example exists primarily to test the following documentation:
 
