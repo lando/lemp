@@ -8,8 +8,8 @@ const {name, version} = require('../../package.json');
 const landoPlugin = name.replace('@lando/', '');
 
 export default defineConfig({
-  title: 'Lando Lemp Plugin',
-  description: 'The offical Lando plugin for Lemp.',
+  title: 'Lando LEMP Plugin',
+  description: 'The offical Lando plugin for LEMP.',
   landoDocs: 3,
   landoPlugin,
   version,
@@ -20,7 +20,7 @@ export default defineConfig({
   ],
   themeConfig: {
     multiVersionBuild: {
-      satisfies: '>=1.6.0',
+      satisfies: '>=1.7.0',
     },
     sidebar: sidebar(),
   },

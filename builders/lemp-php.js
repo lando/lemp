@@ -22,11 +22,11 @@ const loadScripts = options => {
 module.exports = {
   name: 'lemp-php',
   parent: '_appserver',
-  builder: (parent, config) => class LempPhp extends LandoPhp.builder(parent, LandoPhp.config) {
+  builder: parent => class LempPhp extends LandoPhp.builder(parent, LandoPhp.config) {
     constructor(id, options = {}, factory) {
       loadScripts(options);
       options.nginxServiceType = 'lemp-nginx';
       super(id, options, factory);
-    };
+    }
   },
 };

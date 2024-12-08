@@ -1,5 +1,5 @@
 ---
-description: Learn about the team that made the Lemp plugin.
+description: Learn about the team that made the LEMP plugin.
 layout: page
 title: Team
 ---
@@ -10,7 +10,7 @@ title: Team
       Team
     </template>
     <template #lead>
-      We are the people who brought Lemp to Lando.
+      We are the people who brought LEMP to Lando.
     </template>
   </VPLTeamPageTitle>
   <VPLTeamMembers :members="members" size="small"/>
