@@ -14,7 +14,7 @@ lando poweroff
 
 # Should initialize the latest codeignitor codebase
 rm -rf lemp && mkdir -p lemp && cd lemp
-lando init --source remote --remote-url https://github.com/bcit-ci/CodeIgniter/archive/3.1.13.tar.gz --remote-options="--strip-components 1" --recipe lemp --webroot . --name lando-lemp --option composer_version=1.10.27
+lando init --source remote --remote-url https://github.com/bcit-ci/CodeIgniter/archive/3.1.13.tar.gz --remote-options="--strip-components 1" --recipe lemp --webroot . --name lando-lemp --option composer_version=2.8.11
 
 # Should start up successfully
 cd lemp
@@ -35,9 +35,9 @@ lando exec curl -- curl -L appserver_nginx | grep "CodeIgniter"
 cd lemp
 lando php -v | grep "PHP 8.3"
 
-# Should be running nginx 1.27 by default
+# Should be running nginx 1.29 by default
 cd lemp
-lando exec appserver_nginx -- nginx -v 2>&1 | grep 1.27
+lando exec appserver_nginx -- nginx -v 2>&1 | grep 1.29
 
 # Should be running mysql 5.7 by default
 cd lemp
@@ -59,7 +59,7 @@ lando exec appserver -- which phpunit | grep /var/www/
 
 # Should be able to require a composer dep
 cd lemp
-lando composer require phpunit/phpunit
+lando composer require phpunit/phpunit --dev
 lando exec appserver -- phpunit --version
 lando exec appserver -- which phpunit | grep /app
 

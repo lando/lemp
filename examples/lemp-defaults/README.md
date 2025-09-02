@@ -25,8 +25,8 @@ lando exec curl -- curl -L appserver_nginx | grep "DEFAULTS"
 # Should use 8.3 as the default php version
 lando php -v | grep "PHP 8.3"
 
-# Should be running nginx 1.27 by default
-lando exec appserver_nginx -- nginx -v 2>&1 | grep 1.27
+# Should be running nginx 1.29 by default
+lando exec appserver_nginx -- nginx -v 2>&1 | grep 1.29
 
 # Should be running mysql 5.7 by default
 lando mysql -V | grep 5.7
