@@ -33,9 +33,9 @@ Run the following commands to validate things are rolling as they should.
 cd mariadb
 lando php -v | grep "PHP 8.3"
 
-# Should be running nginx 1.27 by default
+# Should be running nginx 1.29 by default
 cd mariadb
-lando exec appserver_nginx -- nginx -v 2>&1 | grep 1.27
+lando exec appserver_nginx -- nginx -v 2>&1 | grep 1.29
 
 # Should be running mariadb 10.3.x by default
 cd mariadb

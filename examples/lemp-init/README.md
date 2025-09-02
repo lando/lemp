@@ -35,9 +35,9 @@ lando exec curl -- curl -L appserver_nginx | grep "CodeIgniter"
 cd lemp
 lando php -v | grep "PHP 8.3"
 
-# Should be running nginx 1.27 by default
+# Should be running nginx 1.29 by default
 cd lemp
-lando exec appserver_nginx -- nginx -v 2>&1 | grep 1.27
+lando exec appserver_nginx -- nginx -v 2>&1 | grep 1.29
 
 # Should be running mysql 5.7 by default
 cd lemp
