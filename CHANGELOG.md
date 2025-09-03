@@ -1,5 +1,8 @@
 ## {{ UNRELEASED_VERSION }} - [{{ UNRELEASED_DATE }}]({{ UNRELEASED_LINK }})
 
+* Removed unneeded `@lando/nginx` dep
+* Removed unneeded `loadScripts` logix
+
 ## v1.9.0 - [September 2, 2025](https://github.com/lando/lemp/releases/tag/v1.9.0)
 
 * Switched images to [bitnamilegacy](https://github.com/bitnami/containers/issues/83267) namespace
