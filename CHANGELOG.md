@@ -1,5 +1,7 @@
 ## {{ UNRELEASED_VERSION }} - [{{ UNRELEASED_DATE }}]({{ UNRELEASED_LINK }})
 
+## v1.9.1 - [September 3, 2025](https://github.com/lando/lemp/releases/tag/v1.9.1)
+
 * Removed unneeded `@lando/nginx` dep
 * Removed unneeded `loadScripts` logix
 

@@ -1,7 +1,7 @@
 {
   "name": "@lando/lemp",
   "description": "A Lando plugin that provides a tight integration with lemp.",
-  "version": "1.9.0",
+  "version": "1.9.1",
   "author": "Mike Pirog @pirog",
   "license": "MIT",
   "repository": "lando/lemp",
