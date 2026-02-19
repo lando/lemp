@@ -3,7 +3,7 @@
 This is the _official_ [Lando](https://lando.dev) plugin for [LEMP](https://en.wikipedia.org/wiki/LAMP_%28software_bundle%29). When installed it...
 
 * Allows users to run a `lemp` stack
-* Allows users to configure `php` version from `5.3` all the way to `8.1`
+* Allows users to configure `php` version from `5.3` all the way to `8.5+`
 * Allows users to configure `webroot`
 * Allows users to configure an `nginx` web server
 * Allows users to configure database backend to (`mariadb`, `mysql`, or `postgres`)
@@ -44,6 +44,7 @@ We try to log all changes big and small in both [THE CHANGELOG](https://github.c
 
 * [@pirog](https://github.com/pirog)
 * [@reynoldsalec](https://github.com/reynoldsalec)
+* [@AaronFeledy](https://github.com/AaronFeledy)
 
 ## Contributors
 
