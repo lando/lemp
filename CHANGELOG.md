@@ -1,5 +1,16 @@
 ## {{ UNRELEASED_VERSION }} - [{{ UNRELEASED_DATE }}]({{ UNRELEASED_LINK }})
 
+## v1.10.0 - [February 18, 2026](https://github.com/lando/lemp/releases/tag/v1.10.0)
+
+* Updated to [@lando/php@^1.10.0](https://github.com/lando/php/releases/tag/v1.10.0)
+* Updated to [@lando/mariadb@1.8.0](https://github.com/lando/mariadb/releases/tag/v1.8.0)
+* Updated to [@lando/postgres@1.6.0](https://github.com/lando/postgres/releases/tag/v1.6.0)
+* Updated to [@lando/argv@1.2.0](https://github.com/lando/argv/releases/tag/v1.2.0)
+* Fixed release workflow trigger to use `published` instead of `created`
+* Bumped CI actions to latest major versions (checkout v6, setup-node v6, cache v5, add-to-project 1.0.2)
+* Added dependabot config
+* Updated README PHP version to 8.5+
+
 ## v1.9.1 - [September 3, 2025](https://github.com/lando/lemp/releases/tag/v1.9.1)
 
 * Removed unneeded `@lando/nginx` dep
