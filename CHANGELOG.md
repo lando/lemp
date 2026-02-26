@@ -1,5 +1,7 @@
 ## {{ UNRELEASED_VERSION }} - [{{ UNRELEASED_DATE }}]({{ UNRELEASED_LINK }})
 
+## v1.10.0 - [February 26, 2026](https://github.com/lando/lemp/releases/tag/v1.10.0)
+
 * Updated to [@lando/php@^1.11.2](https://github.com/lando/php/releases/tag/v1.11.2) for PHP 8.5 support
 * Updated to [@lando/mariadb@1.8.0](https://github.com/lando/mariadb/releases/tag/v1.8.0)
 * Updated to [@lando/postgres@1.6.0](https://github.com/lando/postgres/releases/tag/v1.6.0)
